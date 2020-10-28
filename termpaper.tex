@@ -1,0 +1,470 @@
+\documentclass[12pt]{article}
+\usepackage{lipsum}
+\usepackage[margin=1in,left=1.5in,includefoot]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath} 
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+%title page stuff
+\begin{document}
+
+\begin{titlepage}
+  \begin{center}
+  \huge{\bfseries Brinkman Equation and Velocity Interaction of Point Particles}\\
+  \end{center}
+ 
+  \begin{figure}
+  \centering
+  \includegraphics[height=2in]{logo.jpg}
+  \end{figure}
+  
+  \vspace{5mm}
+  \begin{center}
+  Submitted as Term Paper towards the partial fulfillment of Bachelor of Science course at \textbf{St. Joseph's College(Autonomous)}, Lalbagh Road, Bengaluru.
+  \end{center}
+
+  
+  \vspace{20mm}
+  \begin{center}
+  \textsc{By,\\ Pulamathi Vikranth\\ 17PEM22027\\ St. Joseph's College(Autonomous)-560027}\\
+  \vspace{20mm}
+  Under the Guidance of\\
+  Dr. K. Madhukar, Guide No. 133\\
+  Dept. of Mathematics\\
+  St. Joseph's College(Autonomous)-560027
+  \end{center}
+ 
+
+
+\end{titlepage}
+
+\cleardoublepage
+
+\pagenumbering{roman}
+
+\begin{center}
+\section*{St. Joseph's College(Autonomous)}
+\begin{center}
+Lalbagh Road, Bengaluru
+\end{center}
+\end{center}
+\addcontentsline{toc}{section}{\numberline{}Certificate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=2in]{logo.jpg}
+  \end{figure}
+\vspace{5mm}
+\begin{center}
+\textbf{CERTIFICATE}\\
+\vspace{10mm}
+This is to certify that the term paper entitled \textbf{"Brinkman Equation and Velocity Interaction of Point Particles"}, has been carried out by \textbf{Mr. Pulamathi Vikranth}, towards the partial fulfillment of B.Sc. during 2019-20, under my supervision and guidance.
+
+This term paper has been approved as it satisfies the academic requirements with respect to the said degree.
+\end{center}
+
+\begin{flushleft}
+Date: 26 August 2019\\
+Place: Bengaluru
+\end{flushleft}
+\vspace{10mm}
+\begin{flushright}
+\textsc{Dr. K. Madhukar\\ Guide No. 133\\Dept. of Mathematics\\ St. Joseph's College(Autonomous)-560027}
+\end{flushright}
+
+
+
+\cleardoublepage
+
+
+\begin{center}
+\section*{Acknowledgement}
+\end{center}
+
+\addcontentsline{toc}{section}{\numberline{}Acknowledgement}
+
+
+\begin{center}
+\vspace{50mm}
+I take this opportunity to thank my guide, \textbf{Dr. K. Madhukar} for his expert guidance and mentoring and continuous encouragement throughout to see that this project reached its target since its commencement to its completion.\\
+\vspace{10mm}
+I am also grateful to \textbf{Dr. Fr. Victor Lobo J.},
+Principal, St Joseph's College(Autonomous) for his blessings and support. \\
+\vspace{10mm}
+I am also grateful to my teachers from the \textbf{Department of Mathematics} who helped me directly or indirectly during the
+course of this work, and also to my friends and family for criticizing and praising my work and help me bring out the best. 
+
+\end{center}
+
+\cleardoublepage
+
+\begin{center}
+\section*{Declaration by the Guide}
+\end{center}
+
+\addcontentsline{toc}{section}{\numberline{}Declaration by the Guide}
+
+\begin{center}
+\vspace{40mm}
+This is to certify that the term paper submitted by \textbf{Mr. Pulamathi Vikranth}(17PEM22027), towards the partial fulfillment of the Bachelor of Science course, St. Joseph's College(Autonomous), Bengaluru, was carried out under my guidance, during the academic year 2019-20.\\
+
+
+\end{center}
+\vspace{60mm}
+\begin{flushright}
+\textsc{Dr. K. Madhukar\\Guide No. 133\\ Dept. of Mathematics\\ St. Joseph's College(Autonomous)-560027}
+\end{flushright}
+
+
+
+
+\cleardoublepage
+
+\begin{center}
+\section*{Self-Declaration}
+\end{center}
+
+\addcontentsline{toc}{section}{\numberline{}Self-Declaration}
+
+\begin{center}
+\vspace{30mm}
+I, \textbf{Pulamathi Vikranth}(17PEM22027), declare that this research entitled "Brinkman Equation and Velocity Interaction of Point Particles" was carried out by me in the year 2019 under the guidance of Dr. K. Madhukar.\\
+\vspace{15mm}
+I declare that this study has not been submitted to any other institution for the award of any kind of degree or diploma. 
+
+\end{center}
+\vspace{50mm}
+\begin{flushright}
+\textsc{Pulamathi Vikranth\\17PEM22027}
+\end{flushright}
+\vspace{20mm}
+\begin{flushleft}
+Date: 26 August 2019\\
+Place: Bengaluru
+\end{flushleft}
+
+
+\cleardoublepage
+
+
+
+
+
+%table of contents stuff
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
+
+%main doc stuff
+
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\title{Brinkman Equation and Velocity Interaction of Point Particles}
+\author{Pulamathi Vikranth,  17PEM22027}
+\date{26 August 2019}
+\maketitle
+
+\begin{abstract}
+Flow of a liquid through a porous media is mainly governed by Darcy's Law, which is mostly applicable for a single phase fluid flow with absolute permeability. Using Stokesian Dynamics, Green's function for flow in porous media can be determined. A point-particle assumption also allows us to use Brinkman Equation, as the pore size becomes very large when compared to particle size. A low volume fraction $\phi$ is taken, because the predictive value of Brinkman Equation decreases with increasing $\phi$. At low $\phi$, the agreement between simulation results and Brinkman Equation shows that the method of Stokesian Dynamics correctly captures the screening characteristics of porous media. 
+
+\textbf{Keywords:} Darcy's Law, Brinkman Equation, Stokesian Dynamics, Green's function
+
+\end{abstract}
+
+\section{Introduction}
+Averaged equations describing viscous flow through porous media are of great theoretical and practical interest.  The translation of a rigid sphere was first considered by Stokes (1851), motivated by his interest in the effects of fluid friction on the motion of pendulums. Lovalenti and Brady (1993) have summarized relevant studies conducted prior to 1993 and have also derived an expression for the hydrodynamic force on a particle that is rigid and is also undergoing arbitrary time-dependent motion at small Reynolds numbers, using the reciprocal theorem. Reciprocal Theorem will again be used as a future reference in another paper, where a different kind of problem is addressed. The influence of fluid inertia on the motion of a finite assemblage of solid spherical particles in a slowly changing uniform flow at small Reynolds number $Re$ and moderate Strouhal number $Sl$ which was studied by Leshansky et al (2004). At microscale(fundamental), the Stokes equations apply and hence a complete description of the entire field of flow is provided. On the macroscopic level, Darcy's Law, first established empirically but more recently derived formally by performing appropriate volume averages of the Stokes equations, is applicable$^{(1-4)}$. 
+
+The qualitative difference between these two descriptions led Brinkman$^5$ to suggest a general equation that interpolates between the Stokes Equation and Darcy's Law. His equation: \begin{equation}
+\mu\nabla^2\textbf{u}-\nabla p - \mu\alpha^2\textbf{u} = 0
+\end{equation} 
+where $\mu$ is the Newtonian fluid viscosity, $\alpha^{-2}$ is the permeability, and \textbf{u} and $p$ are average velocity and pressure, is, like the Stokes equation, but unlike Darcy's Law, second order in velocity. The Brinkman Screening Length is given by the relation $\alpha^{-1}=(\sqrt{2}/3)a\phi^{-1/2}$ where $a$ is the particle size and $\phi$ is volume fraction of solids.
+
+Though Brinkman's derivation of $(1)$ was heuristic, subsequent investigators have rigorously established its validity at low volume fraction of solids.$^{6-12}$ In a viscous fluid, the velocity disturbance resulting from a point force decays as 1/r where r is the distance from source point to a point in the fluid. At large distances however($r\gg\alpha^{-1}$), it decays as $1/\alpha^{2}r^{3}$ . In this paper, I employ Stokesian Dynamics to approximate the fundamental solution, or Green's function, for flow in random porous media. The general method using Stokesian Dynamics applied to hydrodynamically interacting particles has been presented by Durlofsky, Brady and Bossis$^{14}$, and extensions to infinite system required for the present problem, were considered by Brady \textit{et al}.$^{15}$ Once the fundamental solution using Green's function is obtained(using Stokesian Dynamics), the results can be compared with solutions of the Brinkman's Equation, allowing an assessment of the applicability of the Brinkman Equation for point particles to porous media of arbitrary volume fraction. 
+
+It will be seen that the problem is essentially to form the N-particle mobility matrix, which relates the difference between velocity of each particle and the suspension average velocity to the forces exerted by each particle on the fluid. Due to the slowly decaying nature of particle interaction, the effects of the particle at great distances is accounted for by using the Ewald Summation technique, presented for Stokes flow by Beenakker.$^{16}$ Appropriate manipulations and averages of this mobility matrix result in the fundamental solution as well as the permeability for the system in question.
+
+Later, I compare my simulation results for the fundamental solution with the Brinkman propagator or Green's Function. The solutions are for very dilute systems($\phi\leq 0.01$) to moderately dilute systems. The Brinkman result is no longer seen for $\phi=0.2$, but provide a  picture of particle interactions in a porous medium. 
+
+
+
+\section{Governing Equation}
+The governing equation is the Darcy's Law$^1$ which states that $$Q=-\frac{kA}{\mu L}\left({p_{b}-p_{a}}\right)$$ where $Q$ is the total discharge of fluid, $k$ is the permeability of the fluid, $\mu$ is the dynamic viscosity of the fluid, $L$ is the length of of consideration $ab$ where the pressure of fluid is $p_{a}$ and $p_{b}$ respectively. Darcy's law is only valid for slow, viscous flow. Most groundwater flow cases fall in this category. Another extension to Darcy's law in its traditional form is the Brinkman term, which accounts the transitional flow between boundaries (introduced by Brinkman in 1949): $$-\beta\nabla^2 q + q = -\frac{k}{\mu}\nabla p$$ where $\beta$ is an effective viscosity term. This term accounts for the flow through medium where the grains of the media are porous themselves, and is usually neglected for its complexity.
+The boundary equation is same as that for Navier-Stokes which is $$\nabla.\textbf{u}=0$$ 
+
+
+\section{Formulation of Problem and Fundamental Solution}
+We need to find a method to determine the velocity field due to a point force disturbance in a porous medium for a point particle($a\rightarrow 0$).  For a given velocity disturbance at any point in the fluid, the exerted forces depends on the position of the particle and other particles in the system. Thus, the system is coupled, and hence the response of every particle is affected by every other particle in the system. Suppose that the flow of the particle in the fluid is in the Stokes region, i.e., (from the Stoke's Law $F=6\pi\eta a v$) the Reynold's Number $$Re=\frac{Ua}{\nu}$$ where $U$ is the velocity, $a$ is the size of the particle and $\nu$ is the kinematic viscosity of the fluid, is lesser than unity($Re<1$).
+
+The work done by Durlofsky and Brady(1987) considers the mobility matrix for hydrodynamically interacting particles, which relates to the velocity as: \begin{equation} \label{eq2}
+\textbf{U=M.F}
+\end{equation} where $\textbf{F}$ is the force/torque vector and $\textbf{U}$ is the rotational/translational velocity vector, for all $N$ particles in the system. From (2) we get; 
+\begin{equation} \label{eq3}
+\textbf{F=R.U}
+\end{equation} where \textbf{$M^{-1}=R$} is the inverse of the mobility matrix, called the Resistance Matrix, which is a measure of the resistance experienced by the particles of the system due to their hydrodynamic interactions and due to the interaction of the fluid. Here \textbf{M} and \textbf{R} represent the particle configuration and are symmetric and positive definite.
+
+
+Methods have been presented for approximating the value of \textbf{R}(and therefore \textbf{M}) for finite and infinite hydrodynamically interacting systems, the short-range forces which prevent overlapping of the particles during simulation require substantial efforts. Here, however, only static systems are taken into consideration over long-ranges where the short-range lubrication forces play no role. Let there be \textit{N} particles in a volume \textit{V} but the ratio \textit{N/V} remains constant as \textit{V} approaches infinity. If the radius is \textit{a}, using the integral representation for the solution of the Stokes equations for the velocity field \textbf{u(x)} at a point \textbf{x} in the field over a mathematical surface $\Gamma$ is 
+\begin{equation} 
+\label{eq4}
+u(x)=-\frac{1}{8\pi\mu} \sum_{\alpha=1}^{\textit{N}} \int_{S_{\alpha}} \textbf{J.n}.\sigma dS -\frac{1}{8\pi\mu} \int_{S_\Gamma} (\textbf{J.}\sigma + \textbf{K.u})\textbf{.n}  dS
+\end{equation}
+where $\textbf{K} = -6 \mu \textbf{rrr}/r^5$, $\sigma$ is the fluid stress tensor, \textbf{n} is the outer normal to the surface and \textbf{J} is the Green's Function for a sphere(or a spherical particle) given as a function of \textbf{\textit{r}} as:
+
+\begin{equation} \label{eq5}
+\textbf{J}(r)=\frac{\textbf{I}}{r} + \frac{\textbf{rr}}{r^3}
+\end{equation}
+where again $\textbf{r}=x_\alpha - x_\beta$ and $r=\vert \textbf{r} \vert$ is the  regular position vector. Now applying Faxen's Laws to ($4$), we have the following relationship between the translational velocity of a given sphere, with the center at $x_\alpha$, and the other \textit{N}-1 spheres:
+
+
+\begin{equation}
+\label{eq6}
+\textbf{U}^{\alpha}-\textbf{u}^{\infty}(x_\alpha)=\frac{\textbf{F}^{\alpha}}{6 \pi \mu a}+\frac{1}{8 \pi \mu} \times \sum_{\beta=1} \left(1+\frac{a^2}{3} \nabla ^2 \right) \textbf{J}(\textbf{x}_\alpha - \textbf{x}_\beta).\textbf{F}^{\beta}
+\end{equation}
+given that $\beta \neq \alpha$ where $\textbf{U}^{\alpha}$ is the velocity of the sphere $\alpha$, and $\textbf{u}^{\infty}(x_\alpha)$ is the imposed flow at infinity evaluated at the center of the sphere. $\textbf{F}^{\alpha}$ is the force exerted by the sphere on the fluid and \textbf{J} is the Green's Function as mentioned earlier in ($5$). 
+
+
+Since this paper deals with point forces(forces for point particles),the $\nabla ^2 \textbf{J}$ is zero. By using ($6$) for every particle in the system, the mobility matrix \textbf{M} can be approximated to  good degree, which agrees well with the Rotne-Prager Approximation by neglecting the O$(1/r^4)$ terms, and since the particles are point sized, no higher-body effects are seen in \textbf{M}. As discussed by Durlofsky et. al$^{14}$, inversion of the \textbf{N}-particle mobility matrix performs many-body reflections on the particles. And the inverse of mobility matrix, which gives the Resistance Matrix, contains many-body interactions for many particle-system. It is these reflections, when summed up, give the screening characteristic of the porous media. The difference however is that, in a resistance matrix, the interactions are via a medium of fixed particles with nonzero forces, whereas, in a mobility matrix, the interactions are via a medium of force-free particles, with nonzero velocities. Therefore, the two-body resistance matrix interactions give the required information of the solution, or the fundamental solution, of the porous media, to a good degree of approximation. Since the two-body interactions has now been introduced, the volume fraction for solids, $\phi$ can now be defined for spherical particles of radius \textit{a} as:
+\begin{equation}
+\label{eq7}
+\phi=\frac{4}{3} \pi a^3 \frac{N}{V}
+\end{equation}
+
+As discussed by Durlofsky \textit{et.al}, a mobility matrix could be formed theoretically with $N_1$ particles such that $N \gg N_1\gg 1$ which would represent an unbounded system. However, to simulate a large number of particles would not yield appropriate results and hence, periodic boundary conditions are introduced, used widely in the Monte Carlo simulation methods. Taking a periodic cell of side length $H$, the volume of the periodic cubic cell becomes $V=H^3$ which would help understand random systems. In section (\ref{graphs}), it will be seen that the simulations are done at nonzero volume fractions $\phi$ and still for a sphere radius $a$, but under my assumptions that the particle under considerations are point-particles, it implies directly that $a \rightarrow 0$ and hence $\phi \rightarrow 0$. Because the interactions decay as $1/r$, the effects far from sphere should also be considered in the simulation. The spheres in a given periodic cell also interact with the spheres in the neighboring periodic cells as well. This involves the lattice summation technique of the Rotne-Prager tensor in ($6$) and hence, it becomes a system of \textit{N} particles with no impressed flow at infinity:
+\begin{equation}
+\label{eq8}
+\textbf{U}^{\alpha}=\frac{\textbf{F}^{\alpha}}{6 \pi \mu a}+\frac{1}{8 \pi \mu} \times \sum_{\gamma} \sum_{\beta=1} \left(1+\frac{a^2}{3} \nabla^2 \right)\textbf{J}(\textbf{x}_{\alpha} - \textbf{x}_{\beta}).\textbf{F}^{\beta}
+\end{equation}
+where $\gamma$ is the number of unit cells and the double summation is not performed for $\gamma=1$ and $\beta=\alpha$.  
+This is the famous Ewald Double Summation technique which was applied by Beenakker$^{16}$. Ewald initially used this summation technique to handle the decaying the Coulombic interactions. In this, Beenakker assumed the total force on the particle in the cell is zero, and hence the infinite summation is convergent. Which also implies, that the summation is valid enough for just 2-particle system, which would require slight modifications to the Green's Function while simulating. Now writing the Ewald Summed version of ($8$),for a new mobility matrix \textbf{M*}, we get the velocity matrix to be of the form:
+\begin{equation}
+\label{eq9}
+\textbf{U}=\textbf{M*}.\textbf{F}
+\end{equation}
+This new mobility matrix related the translational-rotational velocities to force-torque, in a more generalised manner than compared to ($2$). This equation ($9$) holds good when the force exerted by the particle on the fluid is zero. But when this force is nonzero, then the velocity matrix of a particle must be modified, which was first proposed by O'Brien$^{17}$, and the approach to this method was explained by Brady et.al$^{15}$.
+
+Now we return to $(4)$ and see that the variation of \textbf{J} and \textbf{K} will be small over a small surface $dS_{\Gamma}$.  Thus, the \textbf{$\sigma$} and \textbf{u} are replaced by the suspension averages: $\langle \sigma \rangle$ and $\langle \textbf{u} \rangle$ which are either constants or functions of position arising from a shear flow. So, now the imposed velocity flow as a function of \textbf{x} now becomes of the form:
+\begin{equation}
+\label{eq10}
+\textbf{u(x)}-\langle \textbf{u(x)} \rangle = -\frac{1}{8 \pi \mu} \sum_{\alpha=1}^{2} \int_{S_\alpha} \textbf{J.n}.\sigma dS - \frac{n}{8 \pi \mu} \int_{0}^{R} \textbf{J}.\langle \textbf{F} \rangle dV 
+\end{equation}
+where n=N/V is a fixed value and in this paper, N=2. This reduction is valid for point particles, and can be generalized in a straightforward manner to include all the \textit{N} particles, as done by Durlofsky et. al$^{nn}$. Physically, the integral represents the "back-flow" relative to zero volume flux axes $\langle u \rangle = 0$ caused by the fact that $\langle \textbf{F} \rangle \neq 0$. Now on applying Faxen Laws for particle velocity, combined with the above procedure, the convergent expressions for velocities can be found, which is on the lines of ($6$) and looks as:
+\begin{equation}
+\label{eq11}
+\begin{split}
+\textbf{U}^{\alpha}- \langle \textbf{u}(\textbf{x}_\alpha) \rangle &=  \frac{\textbf{F}^{\alpha}}{6 \pi \mu a}\\
+&+\frac{1}{8 \pi \mu} \times \sum_{\gamma} \sum_{\beta=1}^{2} \left(1+\frac{a^2}{3} \nabla^2 \right) \times \textbf{J}(\textbf{x}_{\alpha} - \textbf{x}_{\beta}).\textbf{F}^{\beta} \\
+& - \phi\frac{\langle \textbf{F} \rangle}{6 \pi \mu a} \\
+&-\frac{n}{8 \pi \mu} \int_{0}^{\infty} \left(1+\frac{a^2}{3} \nabla^2 \right) \textbf{J}.\langle \textbf{F} \rangle dV
+\end{split}
+\end{equation}
+Here, the constant term $\phi \langle \textbf{F} \rangle$ arises due to the contributions of $(a^2 / 3)\nabla^2 \textbf{J}$ and this equation, as a whole, is a convergent expression as the velocities of the $N$ particles have been periodically replicated over the entire space, but it is not necessary for the particles to be replicated over the same space. 
+
+Now applying the Ewald Summation Technique to ($11$) yields a similar velocity matrix as seen in ($9$), so when the particles are not force-free, we get:
+\begin{equation}
+\label{eq12}
+\textbf{U}-\langle \textbf{u} \rangle = \textbf{M*.F}
+\end{equation}
+This new mobility matrix \textbf{M*} which is the Ewald Summed Matrix, contains all the information required to simulate and compute the fundamental solution of porous media and it still relates to rotational/translational velocity and the torque/force, but does not include angular velocities. 
+
+According to Beenakker, $\langle \textbf{F} \rangle = 0$ removes only one term in the reciprocal sum and the constant term $\phi\langle \textbf{F} \rangle$ is also found to cancel \textbf{k}, which is the wave vector, when the average force is not zero. So, we can conclude that this is well in agreement with the work done by Beenakker when the average forces are nonzero. Clearly, the mobility matrix \textbf{M*} is obtained whether or not the average forces are zero which shows that there is something else that governs the existence of such a matrix. As a matter of fact, there is something that provides evidence that existence of such a matrix must be true.
+This matrix is purely a geometrical construct which implies that the origins of this are from the particle interactions, and does not in any way depends on the forces between them, or even velocities of the particle. So, working with the Mobility Matrix alone is not enough to tell us about the nature of the forces acting on the particle system because in either case, the particle interactions must be the same.
+
+
+\section{Solution in Porous Media with Brinkman Equation}
+The solution can be obtained by determining the Green's Function for spherical particles in porous media, and we find this by applying an infinitesimally small point force at  point in the medium and then measure its velocity at the remaining points in the medium. Like mentioned before, we consider only two particles(referred to as $\alpha$ and $\beta$ respectively henceforth), and study the interactions between them using the Mobility/Resistance Matrix which is now of the form:
+\begin{equation}
+\label{eq13}
+\textbf{F}=\textbf{R*}.(\textbf{U}- \langle \textbf{u} \rangle)
+\end{equation}
+Using this equation, the Green's Function can be extracted. A point to remember is that the resistance matrix arises due to the interaction of the fixed particles, or the particle-bed. So, all we have to do is compute the interactions and and repeat the process for several different configurations and in each scenario choose a different test particle pair.
+
+But this method is computationally expensive as the number of possibilities, i.e., the number of configurations are tremendously large. Hence, we assume just two particles, as mentioned earlier, and study only their behavior with the particle-bed by forming a resistance matrix corresponding to their interactions:
+\begin{equation}
+\label{eq14}
+\begin{bmatrix}
+\textbf{F}^{\alpha}\\ \textbf{F}^{\beta}
+\end{bmatrix}=
+\begin{bmatrix}
+\textbf{R*}_{\alpha \alpha}& \textbf{R*}_{\alpha\beta}\\
+\textbf{R*}_{\beta\alpha} & \textbf{R*}_{\beta\beta}
+\end{bmatrix} \textbf{.}
+\begin{bmatrix}
+\textbf{U}^{\alpha} - \langle \textbf{u} \rangle \\
+\textbf{U}^{\beta} - \langle \textbf{u} \rangle
+\end{bmatrix}
+\end{equation}
+where $\textbf{R*}_{\alpha \alpha}$ and $\textbf{R*}_{\beta\beta}$ are the 3$\times$3 self-term component matrices and 
+$\textbf{R*}_{\alpha\beta}$ and $\textbf{R*}_{\beta\alpha}$ are the $\alpha - \beta$ interactions of the resistance matrix. 
+
+In in an ideal situation, when the force is applied to a point particle in a porous medium, the average suspension velocity $\langle \textbf{u} \rangle$ and the total force $\Sigma \textbf{F}$ are both zero. But since they are periodically replicated throughout all space, the values are nonzero. While simulation however, it is not possible to determine $\langle \textbf{u} \rangle$ and $\langle \textbf{F} \rangle$ simultaneously as it over-determines the system of equations. For $\langle \textbf{u} \rangle \equiv 0$, the simplification is quite obvious as was mentioned in ($11$). But for the case when $\langle \textbf{F} \rangle \equiv 0$, the condition $\langle \textbf{u} \rangle$ can be derived by:
+\begin{equation}
+\label{eq15}
+\langle \textbf{u} \rangle = \left(\sum_{\alpha=1}^{2} \sum_{\beta=1}^{2} \textbf{R*}_{\alpha\beta}\right)^{-1} \textbf{.} \left(\sum_{\gamma=1}^{2} \textbf{R*}_{\gamma\delta}\right)\textbf{.}\textbf{U}^{\delta}
+\end{equation}
+for translation of a particle $\delta$ with all other particles fixed. Averaging this expression over all particles $\delta$, it can simply be expressed as $\langle \textbf{u} \rangle = (1/N)\textbf{U}$ where \textbf{U} is the translational velocity of any particle with all others fixed. Thus, the other condition when $\langle \textbf{F} \rangle\equiv 0$ can be expressed as:
+\begin{equation}
+\label{eq16}
+\begin{bmatrix}
+\textbf{F}^{\alpha}\\
+\textbf{F}^{\beta}
+\end{bmatrix}=
+\begin{bmatrix}
+ \textbf{R*}_{\alpha \alpha} - (1/N)(\textbf{R*}_{\alpha\alpha}+\textbf{R*}_{\alpha\beta})& \textbf{R*}_{\alpha\beta} - (1/N)(\textbf{R*}_{\alpha\alpha}+\textbf{R*}_{\alpha\beta}) \\
+\textbf{R*}_{\beta\alpha} - (1/N)(\textbf{R*}_{\beta\alpha}+\textbf{R*}_{\beta\beta}) & \textbf{R*}_{\beta\beta} - (1/N)(\textbf{R*}_{\beta\alpha}+\textbf{R*}_{\beta\beta})
+\end{bmatrix}.
+\begin{bmatrix}
+\textbf{U}^{\alpha}\\
+\textbf{U}^{\beta}
+\end{bmatrix}
+\end{equation}
+and is valid for systems where $\langle \textbf{F} \rangle\equiv 0$ and, when compared to the condition $\langle \textbf{u} \rangle\equiv 0$, they are proportional by terms of \textit{1/N}. 
+
+
+For a direct comparison with the two-particle interaction simulation with the Brinkman Propagator, the equation ($14$) for $\langle \textbf{u} \rangle\equiv 0$ and the equation ($16$) for the case $\langle \textbf{F} \rangle\equiv 0$, mobility matrices using inverson methods are formed and the resulting mobility matrix is named $\textbf{M}^{P}_{\alpha\beta}$ which means that the interactions of two particles, $\alpha$ and $\beta$ are via a porous medium P. These point forces create a velocity field at some $\textbf{x}_{\alpha}$ in a Brinkman medium given by:
+\begin{equation}
+\label{eq17}
+\textbf{u(x)} = \frac{3}{4} \textbf{.} \chi (\textbf{x}-\textbf{x}_{\alpha})\textbf{.}\textbf{F}^{\alpha}
+\end{equation} where \textbf{u(x)} is the velocity at a point \textbf{x} and $\textbf{F}^{\alpha}$, nondimensionalized by $6 \pi \mu a$, is the force. $\chi (\textbf{x}-\textbf{x}_{\alpha})$
+is the Brinkman Propagator given by Howells$^8$ as:
+\begin{equation}
+\label{eq19}
+\chi=\frac{4}{3}\textit{f}_{B}(r)\textbf{I} + \frac{4}{3r^2}\textit{g}_{B}(r)\textbf{rr}
+\end{equation}
+For simulations done in porous media, we replace $\chi$ with  \textbf{P} and so, ($18$) can also be written as:
+\begin{equation}
+\label{eq20}
+\textbf{P}=\frac{4}{3}\textit{f}_{P}(r)\textbf{I} + \frac{4}{3}\textit{g}_{P}(r) \frac{\textbf{rr}}{r^2}
+\end{equation}
+By determining $\textit{f}_P(r)$ and $\textit{g}_{P}(r)$, the porous medium propagator is fully defined. These two functions are determined by taking the velocity disturbance of one particle and its effects on the other particle. If this can be done, then the mobility matrix is as defined before, $\textbf{M}^{P}_{\alpha\beta}$. The off-diagonal component of this matrix gives the Green's Function for flow in such a porous medium. This matrix also relates to the velocity of a sphere $\beta$ on $\alpha$. On comparing with Howells Brinkman Propagator, we can find the functions $\textit{f}_P(r)$ and $\textit{g}_{P}(r)$ as follows:
+\begin{equation}
+\textit{f}_{P}(r)=\frac{3}{2 \alpha^2 r^3}\left[(1+\alpha r + \alpha^2 r^2)e^{-\alpha r}-1\right]
+\end{equation}
+and
+\begin{equation}
+\textit{g}_{P}(r)= \frac{9}{2 \alpha^2 r^3}\left[1-(1+\alpha r + \frac{1}{3}\alpha^2 r^2)e^{-\alpha r}\right]
+\end{equation}
+By plotting these functions in the 1,2 and 3 directions, we an make accurate estimates for $\textit{f}_P(r)$ and $\textit{g}_{P}(r)$. A main point to always remember while plotting is that I am taking only 2 particles in the entire system. The system under consideration is also a Brinkman medium, which means that the screening length beyond which the interactions are expected to differ is the square root of permeability, $\alpha^{-1}$. To ensure that happens, the Brinkman Screening Length is kept lesser than unity, and can be understood from the relation, 
+\begin{equation}
+aH=3.4N^{\frac{1}{3}}\phi^{\frac{1}{6}}
+\end{equation}
+In my simulations, the value of \textit{N} is always 2, whereas the value of $\phi$ varies from 0.002 to 0.2.
+
+\section{Graphical Results}
+\label{graphs}
+
+This section includes the simulation results for particle interactions in porous medium, computed with a value of $N=2$ and $\phi=0.01, 0.05, 0.2$. The variations between the results of $\textit{f}_P(r)$ and $\textit{g}_{P}(r)$ are very small and hence look very similar. 
+
+
+We first consider at $\phi=0.01$. Figures $1(a)$ and $1(b)$ show the plots of $\textit{f}_P(r)$ vs $r$ and $\textit{g}_{P}(r)$ vs $r$ respectively. Figures $2(a)$ and $2(b)$ show the same computation previously done by Durlofsky \textit{et. al}, for the same $\phi=0.01$ but for $N=125$.
+
+
+
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include first image
+  \includegraphics[height=5cm]{DF1aplot.png}  
+  \caption{$\textit{f}_P(r)$ vs $r$ at $\phi=0.01$}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  % include second image
+  \includegraphics[height=5cm]{DF1bplot.png}  
+  \caption{$\textit{g}_P(r)$ vs $r$ at $\phi=0.01$}
+  \label{fig:sub-second}
+\end{subfigure}
+\caption{Simulation Results for $\phi=0.01$}
+\label{fig:fig}
+\end{figure}
+
+
+
+
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm]{DF1.jpg}  
+  \caption{$\textit{f}_P(r)$ vs $r$ at $\phi=0.01$ by Durlofsky \textit{et.al}}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm]{DF2.jpg}  
+  \caption{$\textit{g}_P(r)$ vs $r$ at $\phi=0.01$ by Durlofsky \textit{et.al}}
+\end{subfigure}
+\caption{Brinkman Solution}
+\end{figure}
+
+Note that the simulation results agree to a great extent when compared to the results obtained by Durlofsky \textit{et.al}. But a major observation is that the deviation of the curve happens at around $r=7$ in Figure $(2)$.
+
+
+This is so because the assumptions in Figure $(2)$ had $N=125$ and hence, each particle acted as a source for every other particle, thereby increasing the number of interactions. But my work deals only with two particles, i.e., $N=2$ and hence, the number of interactions is relatively very less. Because the Brinkman equation is valid for a system where $\phi\rightarrow 0$, the simulation tries to recover the propagator $\chi$ for low $\phi$ and large \textit{N}. This is very much the case when we see Figure $(1)$ as it behaves like in Brinkman medium when the particles are fixed in space. So the mobility matrix \textbf{M*} is now verified as it results in many-body interactions, which gives a medium that behaves differently from both a pure fluid or force-free field. 
+
+Similar plots are also obtained for values of $\phi=0.05, 0.2$. Despite the small differences between my results and the results shown in Figure $(2)$, the decay rule still holds good and is seen that the Brinkman functions $\textit{f}_P(r)$ and $\textit{g}_{P}(r)$ decay as $1/(\alpha^2 r^3)$ and still behaves as $e^{-\alpha r}/r$ whereas the other decays as just $(1/r)$
+
+
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm]{DF2a.png}  
+  \caption{$\textit{f}_P(r)$ vs $r$ at $\phi=0.05$}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm]{DF2b.png}  
+  \caption{$\textit{g}_P(r)$ vs $r$ at $\phi=0.05$}
+\end{subfigure}
+\caption{Simulation Results for $\phi=0.05$}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm]{DF3a.png}  
+  \caption{$\textit{f}_P(r)$ vs $r$ at $\phi=0.2$}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm]{DF3b.png}  
+  \caption{$\textit{g}_P(r)$ vs $r$ at $\phi=0.2$}
+\end{subfigure}
+\caption{Simulation Results for $\phi=0.2$}
+\end{figure}
+
+\newpage
+\section{Conclusion}
+
+In this paper, I have employed Stokesian Dynamics to determine a form of the fundamental solution in porous media. The results clearly show that this kind of a medium behaves like a Brinkman Medium. Hence, we observe that the properties of the medium arise by themselves as a result of interactions among its own particles without any external interventions. This paper also helps us understand that Stokesian Dynamics is correct, and is still valid from a short range to a large range, even as $N\rightarrow\infty$. The graphs presented demonstrated the agreement between simulations and Brinkman equation at low $\phi$. But as was mentioned in the Introduction, it deviates by a large amount with increasing $\phi$. The procedure applied in this paper is valid for moderately concentrated systems with very less number of particles. For high volume fractions, full Stokesian Dynamics is employed(which also includes lubrication methods), must be used. Theoretical results may directly be compared to my simulation results for finite sized spheres by ensuring that the radius of sphere, $a$ does not tend to 0, as was the case in this paper.
+
+\section{References}
+$^1$H.P.G. Darcy, \textit{Les fontanes publiques de la ville de Dijon}(Dalmont, Paris, 1856)\\
+$^2$J.B. Keller, in \textit{Statistical Mechanics and Statistical Methods in Theory and Applications}, 
+edited by U. Landman(Plenum, New York, 1977), pp.631-644\\
+$^3$S. Whitaker, Transport in Porous Media \textbf{1}, 3(1986)\\
+$^4$H. Brenner, Philos. Trans. R. Soc. London Ser.A \textbf{297}, 81(1980); P.M. Adler and H. Brenner, Phys. Chem. Hydrodon. \textbf{5}, 245(1984)\\
+$^5$H. C. Brinkman, Appl. Sci. Res. A \textbf{1}, 27(1947)\\
+$^6$C. K. W. Tam, J. Fluid Mech. \textbf{38}, 357(1969)\\
+$^7$S. Childress, J. Chem. Phys. \textbf{56}, 2527(1972)\\
+$^8$I. D. Howells, J. Fluid Mech. \textbf{64}, 449(1974)\\
+$^9$E. J. Hinch, J. Fluid Mech. \textbf{83}, 695(1977)\\
+$^{10}$K. F. Freed and M. Muthukumar, J. Chem. Phys. \textbf{68}, 2088(1978); \textbf{70}, 5875(1979)\\
+$^{11}$K. F. Freed and M. Muthukumar, J. Chem. Phys. \textbf{70}, 5875(1979)\\
+$^{12}$J. Rubenstein, J. Fluid Mech. \textbf{170}, 379(1986)\\
+$^{13}$S. Kim and W. B. Russel, J. Fluid Mech. \textbf{154}, 269(1985)\\
+$^{14}$L. Durlofsky, J. F. Brady, and G. Bossis, J. Fluid Mech.\\
+$^{15}$J. F. Brady, R. Philips, J. Lester and G. Bossis, J. Fluid Mech.\\
+$^{16}$C. W. J. Beenakker, J. Chem. Phys. \textbf{85}, 1581(1986)\\
+$^{17}$R. W. O'Brien, J. Fluid Mech. \textbf{91}, 17(1979)\\
+$^{18}$S. Kim and W. B. Russel, J. Fluid Mech. \textbf{154}, 253(1985)\\
+$^{19}$J. F. Brady and L. Durlofsky, Phys. Fluids\\
+
+
+\end{document}
